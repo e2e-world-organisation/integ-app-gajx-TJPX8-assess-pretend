@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: hacbs-test-project-rpod
+spec:
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - env:
+        - name: var_name
+          value: test
+        image: quay.io/quay-or-not-to-quay/nbe-e2e-oery-tenant/integ-app-gajx/hacbs-test-project-rpod@sha256:e1e01b181198c3833581a74ae76bd4ba6cf99d815d8116f934a2d4ded2c529e7
+        name: hacbs-jvm-build-test-project
+        resources: {}
+status: {}
